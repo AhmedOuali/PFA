@@ -1,0 +1,85 @@
+npm install express-generator -g
+express . --hbs
+
+"@angular/common": "2.4.6",
+    "@angular/compiler": "2.4.6",
+    "@angular/compiler-cli": "^0.6.3",
+    "@angular/core": "2.4.6",
+    "@angular/forms": "2.4.6",
+    "@angular/http": "2.4.6",
+    "@angular/platform-browser": "2.4.6",
+    "@angular/platform-browser-dynamic": "2.4.6",
+    "@angular/platform-server": "2.4.6",
+    "@angular/router": "3.4.6",
+    "@angular/upgrade": "2.0.1",   //into package.json
+    
+npm install --save zone.js rxjs core-js
+
+npm install --save-dev @types/node @types/core-js //developpement dependencies
+npm install --save-dev webpack@2.1.0-beta.21 webpack-merge angular2-template-loader awesome-typescript-loader del-cli html-loader typescript angular2-router-loader
+
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "exclude": [
+        "node_modules",
+        "public/js"     //create tsconfig.json and put that into it
+    ]
+}
+
+creating 3 files
+webpack.config.common.js
+webpack.config.dev.js
+webpack.config.prod.js
+
+
+var webpack = require('webpack');
+module.export = {
+    entry: {
+        'app': '.assets/app/main.ts' // RQ: the file who bootstraps angular2 application
+    },
+    
+    resolve: {
+        extensions: ['.js', '.ts']  //in our type script we Always import things without ts extension
+    },
+    
+    module: {
+        loaders: [
+            {
+                test: /\.ts$/,
+                loaders: [
+                    'awesome-typescript-loader',
+                    'angular2-template-loader',                       //in webpack.config.common.js
+                ]
+            },
+            {
+                test: /\html$/,
+                loader: 'html'
+            },
+            {
+                test: /.css/,
+                loader: 'raw'
+            }
+            
+        ]
+    }
+};
+
+var webpackMerge = require('webpack-merge');
+var commonConfig = require('./webpack.config.common.js');
+
+module.exports = webpackMerge(commonConfig, {
+    devtool: 'cheap-module-evel-source-map',
+    output: {                                                //in webpack.config.dev.js
+        path: './public/js/app',
+        file: 'bundle.js',
+        publicPath: 'js/app/',
+        chunkFilename: '[id].chunk.js'
+    }
+});
