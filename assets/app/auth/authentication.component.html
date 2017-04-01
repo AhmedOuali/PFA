@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="carousel slide carousel-fade" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+        </div>
+    </div>
+
+<!-- Remeber to put all the content you want on top of the slider below the slider code -->
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-8">
+            <header class="row spacing">
+                <nav class="col-md-8 col-md-offset-2">
+                    <ul class="nav nav-tabs">
+                        <li routerLinkActive="active"><a [routerLink]="['signup']">Signup</a></li>
+                        <li routerLinkActive="active"><a [routerLink]="['signin']">Signin</a></li>
+                    </ul>
+                </nav>
+            </header>
+               <router-outlet></router-outlet>
+            </div>
+            <div class="col-xs-4 col-xs-offset-4">
+                <app-avisF></app-avisF>
+            </div>
+        </div>
+        
+    </div>
+</div>
