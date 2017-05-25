@@ -16,6 +16,8 @@ export class SignUpComponent  {
             lastName: new FormControl(null, Validators.required),
             email: new FormControl(null, Validators.required),
             password: new FormControl(null, Validators.required),
+            departement: new  FormControl(null, Validators.required),
+            phone:new FormControl(null, Validators.required)
            
         });
     }
@@ -25,6 +27,8 @@ export class SignUpComponent  {
             this.myForm.value.password,
             this.myForm.value.firstName,
             this.myForm.value.lastName,
+            this.myForm.value.departement,
+            this.myForm.value.phone,
             
         );
         console.log(user);

@@ -6,7 +6,7 @@
             name="firstName"
             formControlName="firstName"
             type="text" 
-            placeholder="What's your firstName?" 
+            placeholder="*What's your firstName?" 
             pattern="^[\w]{3,16}$" 
             autofocus="autofocus" 
             required="required" 
@@ -15,7 +15,7 @@
             name="lastName"
             formControlName="lastName"
             type="text" 
-            placeholder="What's your lastName?" 
+            placeholder="*What's your lastName?" 
             pattern="^[\w]{3,16}$" 
             autofocus="autofocus" 
             required="required" 
@@ -25,22 +25,35 @@
             name="password"
             formControlName="password"
             type="password" 
-            placeholder="Choose a password" 
+            placeholder="*Choose a password" 
             required="required" 
             class="input pass">
         <input 
             name="password_confirm"
            
             type="password" 
-            placeholder="Confirm Your password" 
+            placeholder="*Confirm Your password" 
             required="required" 
             class="input pass">
         <input 
             name="email"
             formControlName="email"
             type="email" 
-            placeholder="Email address" 
+            placeholder="*Email address" 
             class="input pass">
+               <input 
+            name="departement"
+            formControlName="departement"
+            type="text" 
+            placeholder="Departement" 
+            class="input pass">
+               <input 
+            name="phone"
+            formControlName="phone"
+            type="number" 
+            placeholder="Phone Number" 
+            class="input pass">
+            <h1>(*)for required</h1>
         <input 
             type="submit" 
             value="Sign me up!" 

@@ -13,15 +13,5 @@ $(document).ready(function(){
 
 
 
-//----------CODE de controle du sign in-----------------  
- $(document).ready(function () {
-    $('.forgot-pass').click(function(event) {
-      $(".pr-wrap").toggleClass("show-pass-reset");
-    });
-    s
-    $('.pass-reset-submit').click(function(event) {
-      $(".pr-wrap").removeClass("show-pass-reset");
-    }); 
-});
-//------------------------------------------------------
-//------------------------------------------------------
+
+

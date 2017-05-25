@@ -234,3 +234,7 @@ $(document).ready(function(){
 //-------------------------------------------------------------------------
 
 // https://github.com/do-web/jquery-loadingModal
+// $('.bxslider').bxSlider({
+// 		auto: true,
+// 		mode: 'fade'
+// 	});

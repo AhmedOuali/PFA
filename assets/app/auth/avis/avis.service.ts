@@ -23,10 +23,8 @@ export class AvisService {
                         .map((response:Response) => {
                             const result=response.json();
                             const message= new Avis(result.obj.content,result.obj.name,result.obj.email,result.obj._id);
-                            this.messages.push(message);
-                            
-
                             this.errorService.handleError({title: response.json().title, text: response.json().message, type: 'success'});//creating an alert success
+                            this.messages.push(message);
                             return message;
                             
                         })//transform data to the server ---transform data th the post method who saves data--
@@ -42,7 +40,6 @@ export class AvisService {
                     {
                         return this.http.get('http://pfa01-xcapo32.c9users.io/avis')
                         .map((response:Response)=>{
-                            
                             const messages=response.json().obj;
                             let transformedMessages:Avis[]=[];
                             for (let message of messages) {

@@ -5,21 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Component({
     selector:'app-avis',
     templateUrl:'./avis.component.html',
-    
-     styles : [` 
-                 .author { 
-                            display : inline-block;
-                            font-style: italic;
-                            font-size:12px;
-                            width:80%;
-                                        }
-                         .config { 
-                            display : inline-block;
-                            font-style: right;
-                            font-size:12px;
-                            width:19%;
-                                       } 
-            `]    
+     styleUrls: ['./avis.component.css']
      })
     
      export class AvisComponent {

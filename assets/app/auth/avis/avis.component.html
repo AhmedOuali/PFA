@@ -1,13 +1,29 @@
- <article class="panel panel-default" [ngStyle]="{ backgroundColor : Color}" (mouseenter)="Color='LightSkyBlue'" (mouseleave)="Color='Wheat'" > 
-    <div class="panel-body">
-        {{message.content}}
-    </div>  
-    <footer class="panel-footer">
-        <div class="author">
-            {{message.name}}--{{message.email}}
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="panel panel-white post panel-shadow">
+                <div class="post-heading">
+                    <div class="pull-left image">
+                        <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                    </div>
+                    <div class="pull-left meta">
+                        <div class="title h5">
+                            <a href="#"><b>{{message.name}}</b></a>
+                            made a post.
+                        </div>
+                        <h6 class="text-muted time">{{message.email}}</h6>
+                    </div>
+                </div> 
+                <div class="post-description"> 
+                    <p>{{message.content}}</p>
+                    <div class="stats">
+                        
+                        <a (click)="onDelete()" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span> Hide</a>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="config">
-            <a (click)="onDelete()"> Delete</a>
         </div>
-    </footer>
-</article>
+        </div>

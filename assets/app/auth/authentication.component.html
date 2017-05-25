@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel slide carousel-fade" data-ride="carousel" id="myCarousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
@@ -12,25 +12,67 @@
     </div>
 
 <!-- Remeber to put all the content you want on top of the slider below the slider code -->
-
-    
+<div class="title">
+        <h1>Bienvenue</h1>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-xs-4 col-xs-offset-8">
-            <header class="row spacing">
-                <nav class="col-md-8 col-md-offset-2">
-                    <ul class="nav nav-tabs">
-                        <li routerLinkActive="active"><a [routerLink]="['signup']">Signup</a></li>
-                        <li routerLinkActive="active"><a [routerLink]="['signin']">Signin</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <div class="col-xs-5">
+                <h1 style="text-shadow: 2px 2px #000;
+                            color: #FFF;">
+                    <strong>Bienvenue sur pfa01.</strong>
+                </h1>
+                <h3 style="text-shadow: 2px 2px #000;
+                            color: #FFF;">
+                    Cette version est la version 1.0 du site (ce n'est qu'un demo) !
+                </h3>
+            </div>
+            <div class="col-xs-4 col-xs-offset-3">
+                <header class="row spacing">
+                    <nav class="col-md-8 col-md-offset-2">
+                        <ul   class="nav nav-pills">
+                            <li routerLinkActive="active"><a [routerLink]="['signup']">Signup</a></li>
+                            <li routerLinkActive="active"><a [routerLink]="['signin']">Signin</a></li>
+                        </ul>
+                    </nav>
+                </header>
                <router-outlet></router-outlet>
+               
             </div>
-            <div class="col-xs-4 col-xs-offset-4">
-                <app-avisF></app-avisF>
-            </div>
+            
         </div>
+        <br><br>
+       
+        
+	<div class="row">
+      
+          <button class="btn btn-info" type="button" data-toggle="modal" data-target="#myModal1">
+               <span  class="glyphicon glyphicon-comment" aria-hidden="true"></span>Voir les avis
+          </button>
+           <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">
+               <span  class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Poster un avis
+          </button>
+          
+        
+          </div>
+
+
+        
+        <div class="modal fade" tabindex="-1"  id="myModal"  role="dialog">
+                <div class="modal-dialog" role="document">
+                    
+                <app-avisF></app-avisF>
+             
+                </div><!-- /.modal-dialog -->
+            </div>
+             <div class="modal fade" tabindex="-2" id="myModal1"  role="dialog">
+                <div class="modal-dialog" role="document">
+                    
+               <app-avislist></app-avislist>
+             
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            
         
     </div>
 </div>

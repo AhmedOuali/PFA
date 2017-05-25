@@ -18,6 +18,9 @@ import {AvisListComponent} from "./auth/avis/avislist.component";
 import {Avis} from "./auth/avis/avis.model";
 import {AvisService} from "./auth/avis/avis.service";
 import {AvisFComponent} from "./auth/avis/avisF.component";
+import { CookieService } from 'angular2-cookie/services/cookies.service';
+
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -30,16 +33,17 @@ import {AvisFComponent} from "./auth/avis/avisF.component";
         AvisComponent,
         AvisInputComponent,
         AvisListComponent,
-        AvisFComponent
+        AvisFComponent,
         
     ],
-    providers: [AuthService, ErrorService, AvisService],
+    providers: [AuthService, ErrorService,CookieService, AvisService],
     imports: [
         BrowserModule, 
         routing,
         FormsModule,
         ReactiveFormsModule,
-        HttpModule],
+        HttpModule
+        ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

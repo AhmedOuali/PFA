@@ -1,5 +1,5 @@
             
-    <form class="well form-horizontal" (ngSubmit)="onSubmit()" [formGroup]="form">
+    <form class="well form-horizontal"  (ngSubmit)="onSubmit()" [formGroup]="form">
 <fieldset>
 
 <!-- Form Name -->
@@ -14,7 +14,7 @@
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   <input   type="text"
    formControlName="name"
-  name ="name" 
+  name ="name"  style="width: 180px;"
   placeholder="What's your Name?"  class="form-control"  >
     </div>
   </div>
@@ -31,7 +31,7 @@
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
   <input  name="email" 
-    type="email" 
+    type="email" style="width: 180px;"
     formControlName="email"
     placeholder="What's your Email?"  class="form-control"  >
     </div>
@@ -47,7 +47,7 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
         	<textarea class="form-control" 
    formControlName="content"
-  name ="content" 
+  name ="content" style="width: 180px;"
   placeholder="What's your View?" ></textarea>
   </div>
   </div>
